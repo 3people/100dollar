@@ -22,89 +22,43 @@
 
     <div id="content1" class="frame selected">
       <div id="Timeline">
-        <h2>Timeline</h2>
-        <span id="timeline_btn">more → </span>
+        <!-- <button class="btn btn-blue btn-border-o">TIMELINE</button> -->
       </div>
       
       <div id="Home">
         <div id="Notice">
-          <h2>Notice</h2>
-          <ul>
-            <li>휴강관련해 공지 올립니다.</li>
-            <li>시험관련해 공지 올립니다.</li>
-            <li>lab08 관련해 공지 올립니다.</li>
-          </ul>
-        </div>
-        <div id="Inform">
-          <h2>Inform</h2>
-          <div id="Lecturer_Assitants">
-              <h3>Lecturer & Assitants</h3>
-                <div>
-                  <ul>
-                  <h4>Scott Lee</h4>
-                    <li>Office : 학연산클러스터 617호</li>
-                    <li>Tel : 031-400-5238</li>
-                    <li>Email : scottlee@hanyang.ac.kr</li>
-                  </ul>
-                  <ul>
-                  <h4>Gihan Lee</h4>
-                    <li>Office : 학연산클러스터 621호</li>
-                    <li>Tel : 031-400-4754</li>
-                    <li>Email : fantasyopy@hanyang.ac.kr</li>
-                  </ul>
-                  <ul>
-                  <h4>Hakjin Lee</h4>
-                    <li>Office : 학연산클러스터 621호</li>
-                    <li>Tel : 031-400-4754</li>
-                    <li>Email : gsdjini91@hanyang.ac.kr</li>
-                  </ul>
-                </div>
-          </div>
-
-          <div id="class_section">
-            <h3>Sections</h3>
-            <ul>
-              <li>
-                <h4>Class 1(23487)</h4>
-                <ul>
-                  <li>Lecture Time : Thu(09:00 - 10:30) & Fri (13:00 - 14:30)</li>
-                  <li>Lecture Place : Enginerring Building#1 Room 402</li>
-                  <li>Lab Time :  Fri (09:00 - 11:00)</li>
-                  <li>Lab Place : Enginerring Building#4 PC Room 1 & 2</li>
-                </ul>
-              <li>
-                <h4>Class 2(2446  5)</h4>
-                <ul>
-                  <li>Lecture Time : Thu(10:30 - 12:00) & Fri (14:30 - 16:00)</li>
-                  <li>Lecture Place : Enginerring Building#1 Room 402</li>
-                  <li>Lab Time :  Fri (16:00 - 18:00)</li>
-                  <li>Lab Place : Enginerring Building#4 PC Room 1 & 2</li>
-                </ul>
-              </li>
+          <section>
+            <h1>NOTICE</h1>
+            <ul id="notice_list">
             </ul>
+          </section>
+          
+        <div id="Inform">
+          <h1>INFORMATION</h1>
+          <div class="wrapper">
+            <div class="slider" id="people_container">
             </div>
-              <div id="coures_objectives">
-                <h3>Course Objectives</h3>
-                <p>In this course, the followings will be covered to adequately enable web programming and web application development:</p>
-                <ul>
-                  <li>
-                    Understand the protocols, language and systems used on the Web (HTML, CSS, HTTP, URLs, XML)
-                  </li>
-                  <li>Understand the functions of clients and servers on the Web & learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)  </li>
-                  <li>Obtain ability to design and implement an interactive web site where usability, accessibility and internationalization issues are considered</li>
-                  <li>Learn how to use/manage database associated with web applications (mainly storage and retrieval)</li>
-                </ul>
-              <button>Coure Forum</button>
-              </div>
-              <div id="Assesment">
-                <h3>Assesment</h3>
-                <ul>
-                  <li>Attendance (10%)</li>
-                  <li>Midterm Exam (30%)</li>
-                  <li>Final Exam (30%)</li>
-                  <li>Team Project (30%)</li>
-                </ul>
-              </div>
+          </div>
+        </div>
+        <div id="class_section">
+          <h1>Sections</h1>
+          <table>
+            <caption>LECTURE SUMMARY</caption>
+            <thead>
+              <tr>
+                <th scope="col">CLASS</th>
+                <th scope="col">LECTURE TIME</th>
+                <th scope="col">LECTURE PLACE</th>
+                <th scope="col">LAB  <br>TIME</th>
+                <th scope="col">LAB PLACE</th>
+              </tr>
+            </thead>
+            <tbody id="sections">
+            </tbody>
+          </table>
+        </div>
+          <div id="coures_objectives">
+            <h1>Course Objectives</h1>
 
           </div>
         </div>
@@ -122,7 +76,8 @@
 
     <script type="text/javascript" src="./js/courses.js"></script>
     <script type="text/javascript" src="./js/timeline.js"></script>
-    <script type="text/javascript" src="./js/course.js"></script>
+
+    <!-- <script type="text/javascript" src="./js/course.js?ver=2"></script> -->
 
   </body>
 </html>
