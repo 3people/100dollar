@@ -89,7 +89,7 @@ document.querySelector("#pbl_groupBtn").addEventListener('click', fold_pbl_group
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('header').outerHeight;
+var navbarHeight = $('header').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
