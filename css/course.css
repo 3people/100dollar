@@ -16,7 +16,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity:0.5;
+	/*opacity:0.5;*/
   }
   
   #header a {
@@ -64,12 +64,13 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	
+	height: 400vh;
 	margin: 0vh auto 10vh;
-	border-radius: 5vw;
-	background-color: rgb(255,255,250);
-	box-shadow:  0 0 10vw rgba(0,0,0,0.4);
+	/*border-radius: 5vw;*/
+	/*background-color: rgb(255,255,250);*/
+	/*box-shadow:  0 0 10vw rgba(0,0,0,0.4);*/
 	overflow-x: visible;
-	overflow-y: hidden;
+	overflow-y: scroll;
 }
 
 .frame.selected {
@@ -84,7 +85,7 @@ body {
 	width: 1px;
 	margin :0;
 	opacity: 0;
-	overflow : hidden;
+	/*overflow*/ : hidden;
 	clip : rect(1px,1px,1px,1px);
 	white-space: nowrap;
 }
@@ -184,6 +185,12 @@ img {
 .slide-switch:checked + .slide-label + .slide-content {
   animation: slide 1s;
 }
+
+img.peopleImg {
+	width:10vw;
+	/*height: 10vw;*/
+}
+
 table {
 	border: 1px solid #ccc;
 	border-collapse: collapse;
@@ -295,7 +302,8 @@ ul {
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
-	text-align:center;
+	/*text-align:center;*/
+	overflow-y: scroll;
 }
 
 .time_slot{
@@ -321,11 +329,15 @@ h1 {
 	color: #2c3e50;
 	text-align: center;
 }
+
+#navi > h1 {
+	border: none;
+}
 section {
-	text-align: center;
+	text-align: center;	
 	position: relative;
 }
-.btn {
+/*.btn {
 
 	display: inline-block;
 	line-height: 35px;
@@ -377,15 +389,12 @@ section {
 }
 .btn-border-o.btn-blue:hover {
 	color: #000;
-}
+}*/
 .time_slot.deselected{
 	height: 0;
 	opacity: 0;
 }
 
-.time_slot:hover{
-	background-color: rgba(0,0,0,0.1);
-}
 
 .date{
 	display: flex;
@@ -402,7 +411,7 @@ section {
 	box-sizing: border-box;
 	padding : 1vh 0  1vh 3vw;
 	width: calc(35vw/3*2);
-	border-left: 1px solid blue;
+	border-left: 2px solid rgba(0,0,0,0.1);
 }
 
 .slot_content.class::before {
@@ -410,7 +419,8 @@ section {
 	display: inline-block;
 	width: 0.3rem;
 	height: 0.3rem;
-	border : 0.05rem solid black;
+	border : 0.05rem solid #00B7FF;;
+	background-color: #00B7FF;
 	border-radius: 0.15rem;
 	transform: translate( calc(-3vw - 0.3rem),600%);
 	transition-duration: 0.2s;
@@ -431,6 +441,10 @@ section {
 	border-right:1rem solid rgba(0,0,0,0.1); 
 	transform: translate(calc(-100% - 1vw),50%);
 }
+.slot_contentbox.selected {
+	
+}
+
 .slot_contentbox >h4{
 	margin: 0.1rem 0;
 	border-bottom : 1px solid black;
@@ -449,22 +463,15 @@ section {
 	margin: 0;
 	width: 50px;
 	box-sizing: border-box;
-	background-color : black;
-	color: white;
+	/*color : #00B7FF;*/
+	/*background-color : black;*/
+	/*color: white;*/
 }
 .week:before{
 	width:0;
 	height:0;
 }
 
-#timeline_btn {
-	position: absolute;
-	font-weight: bold;
-	color: blue;
-	bottom: 5vh;
-	align-self: center;
-	z-index: 3;
-}
 
 #Home{
 	display: flex;
@@ -492,37 +499,6 @@ section {
 	justify-content: flex-start;
 }
 
-#pbl_objective {	
-	display: flex;
-	height: 60vh;
-	flex-direction: column;
-	justify-content: center;
-}
-
-#pbl_GGroup {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height:60vh;
-	opacity: 1;	
-}
-
-#pbl_GGroup > div  {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-#sec1btn{
-	min-width: 
-}
-
-#pbl_GGroup.fold{
-	height: 0;
-	min-height: 0;
-	opacity: 0;
-}
 a {
 	position: relative;
     color: #000;
@@ -537,7 +513,7 @@ a:visited{
 a:hover{
 	color: #000;
 }
-a:before {
+#Notice a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -551,48 +527,27 @@ a:before {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
 }
-a:hover:before {
+#Notice a:hover:before {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
   }
-.pbl_group_container {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	height: 30vh;
-	width: 30vw;
-	margin: 2.5vh 2.5vh;
-	box-sizing: border-box;
-	padding : 2vh 2vw;
-	border : 1px solid rgba(200,200,200,0.5);
-	box-shadow: 0 0 2vw rgba(150,150,150,0.2);
-	border-radius: 1.5vw;
-	font-size:  0.8rem;
-	background-position: top  70% right -90%;
-	background-repeat: no-repeat;
+
+
+#Timeline::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
-.pbl_group_container > h4{
-	position: absolute;
-	top: 1vh;
-	font-size: 1rem;
+#Timeline::-webkit-scrollbar-thumb {
+    background-color: rgba(240,240,240,1);
 }
 
-.pbl_group_list{
-
-	display: flex;
-	flex-direction: row;
-	flex-wrap : wrap;
-	justify-content: flex-start;
-	width: 12vw;
-	margin :10vh 0 0;
-	padding : 0;
-	list-style: none;		
-}
-.pbl_group_list > li {
-	margin: 0 0.5rem 0 0;
+.frame::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
+.frame::-webkit-scrollbar-thumb {
+    background-color: rgba(240,240,240,1);
+}

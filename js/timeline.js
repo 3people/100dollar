@@ -1,189 +1,90 @@
 
 
 const Timeline = document.querySelector("#Timeline");
+const Notice_list = document.querySelector("#notice_list");
 
+let Course = {};
+let course_name = new URL(location.href).searchParams.get("name");
+console.log(course_name);
 
-const Course =  {
-	date  : [ "09/05","09/06","09/12","09/13","09/19","09/20","09/26","09/27","10/02","10/03","10/09","10/10","10/16","10/17","10/23","10/24","10/30","10/31","11/07","11/08","11/14","11/15","11/21","11/22","11/28","11/29","12/05","12/06","12/12","12/13","12/19","12/20"
-	],
+	
+var req = new XMLHttpRequest();
+req.onreadystatechange = function(e){
+	console.log(""+req.readyState + req.status);
+	if( req.readyState == 4) {
+		if( req.status == 200){
 
-	week : [ 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16],
-
-	subject : [ "Introduction & The Internet and World Wide Web", "Basic HTML", "CSS for Styling", "Page Layout", "Basic PHP", "Forms", "Relational Database & SQL", "JavaScript", "DOM", "Prototype & Event", "Ajax & XML & JSON", "Scriptaculous"
-	],
-
-	lecture_slide :[
-	"https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html","https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/01-www.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/02-html.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/03-css.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/04-layout.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/05-PHP.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/07-sql.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/08-javascript.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/09-dom.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/10-prototype.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/11-events.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/12-ajaxXmlJson.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/13-webServices.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/14-scriptaculous.html" ],
-
-	lab : {
-		week : [3,4,5,6,7,9,10,11,12],
-		subject : ["Introduction","About Me(HTML)", "CSS", "CSS Design & Layout", "Movie Review(HTML, CSS, Layout)", "Basic PHP", "Forms", "SQL", "JavaScript"],
-		lab_slide : ["https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab0-introduction.html","https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab1-aboutme(HTML).html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab3-favorite.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab4-movieReview.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab5-musicLibrary.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab6-gradeStore.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab7-SQL.html", "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab8-pimpMyText.html"]
-	},
-
-	pbl :{
-		pbl_project : "Develop a Web Application",
-		pbl_project_description : ["Topic: a useful Web application for Software Engineering Laboratory (selab)", "Scope: Renewal of Software Engineering laboratory's web application", "Type: group project - 5 ~ 6 people in a group", "Duration: the entire 2nd semester", "Deliverable: implementation + presentation + report", "Counts towards 30% of the final course grade", "Grade: Topic Selection & Web application Desgin (5%) / Implementation(15%) / Presentation(5%)"],
-		pbl_slide : 'https://selab.hanyang.ac.kr/courses/cse326/2019/project/project.html',
-		pbl_group : {
-				section1 : [
-					{
-						team_name : "team1",
-						leader : "박서연",
-						team_member : ["이효원", "정희재", "김재현", "모지환", "황예찬"],
-						team_page : "#"
-					},
-					{
-						team_name : "team2",
-						leader : "이종민",
-						team_member : ["박준영", "박진혁", "송현수", "엄세진", "이준섭"],
-						team_page : "#"
-					},
-					{
-						team_name : "team3",
-						leader : "김소현",
-						team_member : ["임소윤", "이정인", "강가원", "안예진"],
-						team_page : "#"
-					},
-					{
-						team_name : "team4",
-						leader : "이민혁",
-						team_member : ["백승민", "김유현", "Ana Carolina Cardoso", "Zhou Xueyi", "Federik Bonde"],
-						team_page : "#"
-					},
-					{
-						team_name : "team5",
-						leader : "양재우",
-						team_member : ["주한새", "강은호", "권순범", "김하영", "안한서"],
-						team_page : "#"
-					},
-					{
-						team_name : "team6",
-						leader : "위준범",
-						team_member : ["배진우", "박재선", "박성수", "최준호"],
-						team_page : "#"
-					},
-					{
-						team_name : "team7",
-						leader : "박재용",
-						team_member : ["김동규", "이세명", "오승기", "김덕영"],
-						team_page : "#"
-					},
-					{
-						team_name : "team8",
-						leader : "고동현",
-						team_member : ["김동현", "김두호", "왕종휘", "김예진", "문수림"],
-						team_page : "#"
-					},
-					{
-						team_name : "team9",
-						leader : "성태훈",
-						team_member : ["박예찬", "이무경", "장윤호", "심유빈"],
-						team_page : "#"
-					},
-					{
-						team_name : "team10",
-						leader : "윤규민",
-						team_member : ["박제현", "임정현", "윤지인", "이수종"],
-						team_page : "#"
-					}
-				],
-				section2 : [
-					{
-						team_name : "team1",
-						leader : "박서연",
-						team_member : ["이효원", "정희재", "김재현", "모지환", "황예찬"],
-						team_page : "#"
-					},
-					{
-						team_name : "team2",
-						leader : "이종민",
-						team_member : ["박준영", "박짆격", "송현수", "엄세진", "이준섭"],
-						team_page : "#"
-					},
-					{
-						team_name : "team3",
-						leader : "김소현",
-						team_member : ["임소윤", "이정인", "강가원", "안예진"],
-						team_page : "#"
-					},
-					{
-						team_name : "team4",
-						leader : "이민혁",
-						team_member : ["백승민", "김유현", "Ana Carolina Cardoso", "Zhou Xueyi", "Federik Bonde"],
-						team_page : "#"
-					},
-					{
-						team_name : "team5",
-						leader : "양재우",
-						team_member : ["주한새", "강은호", "권순범", "김하영", "안한서"],
-						team_page : "#"
-					},
-					{
-						team_name : "team6",
-						leader : "위준범",
-						team_member : ["배진우", "박재선", "박성수", "최준호"],
-						team_page : "#"
-					},
-					{
-						team_name : "team7",
-						leader : "박재용",
-						team_member : ["김동규", "이세명", "오승기", "김덕영"],
-						team_page : "#"
-					},
-					{
-						team_name : "team8",
-						leader : "고동현",
-						team_member : ["김동현", "김두호", "왕종휘", "김예진", "문수림"],
-						team_page : "#"
-					},
-					{
-						team_name : "team9",
-						leader : "성태훈",
-						team_member : ["박예찬", "이무경", "장윤호", "심유빈"],
-						team_page : "#"
-					},
-					{
-						team_name : "team10",
-						leader : "윤규민",
-						team_member : ["박제현", "임정현", "윤지인", "이수종"],
-						team_page : "#"
-					}
-				]
+			if(req.response.type == "course"){	
+				console.log("course");
+				Course = req.response.content;
+				setTimeout(()=>{
+					make_Timeline();
+					focusOn();
+					make_noticeList();
+					make_sectionList();
+					make_peopleSlider();
+					make_courseObjectives();
+				},200);
 			}
+				console.log(req.response);
+		}
 	}
 };
+req.responseType = "json";
+
+req.open("GET",`json/${course_name}.json`,true);
+req.send(null);
+
 
 const make_Timeline = function(){
 	const Timeline = document.querySelector("#Timeline");
 	let cur_week = 0;
-	let lab_count = 0;
-
+	// let lab_count = 0;
+	console.log(Course.date);
 	for(i=0;i<Course.date.length;i++){
 		const newDiv = document.createElement("div");
 		const slot_content = document.createElement("div");
 		const slot_contentbox = document.createElement("div");
 		const date = document.createElement("h4");
-		const subject = document.createElement("h4");
-		const lec_note = document.createElement("a");
 
 		const date_text = document.createTextNode(Course.date[i]);
-		const subject_text = document.createTextNode(Course.subject[i]);
-		const lec_note_text = document.createTextNode("lecture note");
+		
+
+		if(typeof Course.lecture_schedule[i] == "object"){
+			for(var j=0; j<Course.lecture_schedule[i].length;j++){
+				const k = Course.lecture_schedule[i][j];
+				console.log(k);
+				const subject = document.createElement("h4");
+				const subject_text = document.createTextNode(Course.lecture[k].subject);
+				const lec_note = document.createElement("a");
+				const lec_note_text = document.createTextNode("lecture note");
+
+				lec_note.href= Course.lecture[k].lecture_slide;
+				subject.appendChild(subject_text);
+				lec_note.appendChild(lec_note_text);
+				subject.classList.add("subject");
+				lec_note.classList.add("lec_note");
+				slot_contentbox.appendChild(subject);
+				slot_contentbox.appendChild(lec_note);
+			}
+		} else {
+			console.log(i);
+				const subject = document.createElement("h4");
+				const subject_text = document.createTextNode(Course.lecture_schedule[i]);
+				subject.appendChild(subject_text);
+				slot_contentbox.appendChild(subject);
+		}
+
 
 		date.appendChild(date_text);
-		subject.appendChild(subject_text);
-		lec_note.appendChild(lec_note_text);
-		lec_note.href = Course.lecture_slide[i];
 
 		newDiv.classList.add("time_slot");
 		slot_content.classList.add("slot_content");
 		slot_content.classList.add("class");
 		slot_contentbox.classList.add("slot_contentbox");
 		date.classList.add("date");
-		subject.classList.add("subject");
-		lec_note.classList.add("lec_note");
 
+		
 
 		if(Course.week[i] != cur_week){
 			const newWeek = document.createElement("div");
@@ -214,16 +115,38 @@ const make_Timeline = function(){
 
 		newDiv.classList.add("week"+cur_week);
 
-		slot_contentbox.appendChild(subject);
-		slot_contentbox.appendChild(lec_note);
 		slot_content.appendChild(slot_contentbox);
 		newDiv.appendChild(date);
 		newDiv.appendChild(slot_content);
 		Timeline.appendChild(newDiv);
 
-		
-		if(cur_week != Course.week[i+1] && Course.lab.week.indexOf(cur_week) >=0){
+		if(Course.notice_schedule[i] != null){
+			for (j=0;j<Course.notice_schedule[i].length;j++){
+				const noticebox = document.createElement("div");
+				const noticebox_subject = document.createElement("h5");
+				const noticebox_content = document.createElement("p");
 
+				const notice_index = Course.notice_schedule[i][j];
+				console.log(notice_index);
+
+				const noticebox_subjectText = document.createTextNode(Course.notice[notice_index].subject);
+				const noticebox_contentText = document.createTextNode(Course.notice[notice_index].content);
+
+				noticebox_subject.appendChild(noticebox_subjectText);
+				noticebox_content.appendChild(noticebox_contentText);
+				noticebox.appendChild(noticebox_subject);
+				noticebox.appendChild(noticebox_content);
+				slot_contentbox.appendChild(noticebox);
+			}	
+		}
+
+		
+		if(cur_week+1 <= Course.week[Course.week.length-1] && cur_week != Course.week[i+1] &&   Course.lab_schedule[cur_week-1] != null 	){
+
+
+
+			const lab_index =  Course.lab_schedule[cur_week-1];
+			if(Course.lab[lab_index]){
 			const newLab = document.createElement("div");
 			const lab_date = document.createElement("div");
 			const lab_content = document.createElement("div");
@@ -231,18 +154,19 @@ const make_Timeline = function(){
 			const lab_subject = document.createElement("h4");
 			const lab_note = document.createElement("a");
 
-			const lab_subject_text = document.createTextNode(Course.lab.subject[lab_count]);
+			const lab_subject_text = document.createTextNode("[lab] "+Course.lab[lab_index].subject);
 			const lab_note_text = document.createTextNode("lab note");
 
 			lab_date.appendChild(document.createTextNode(" ")); 
 			lab_subject.appendChild(lab_subject_text);
 			lab_note.appendChild(lab_note_text);
 
-			lab_note.href=Course.lab.lab_slide[lab_count];
+			lab_note.href=Course.lab[lab_index].lab_note;
 
 			lab_content.classList.add("slot_content");
 			lab_contentbox.classList.add("slot_contentbox");
 			newLab.classList.add("time_slot");
+			newLab.classList.add("lab");
 			newLab.classList.add("week"+cur_week);
 
 
@@ -252,9 +176,16 @@ const make_Timeline = function(){
 			newLab.appendChild(lab_date);
 			newLab.appendChild(lab_content);
 			Timeline.appendChild(newLab);
-			lab_count++;
+			}
+
 		}
 
+
+		const curweek_slot = document.querySelectorAll(".week"+cur_week+" .slot_contentbox");
+		curweek_slot.forEach((element)=>{
+		// element.classList.remove("deselected");
+		element.classList.add("selected");
+	});
 	}
 };
 
@@ -266,9 +197,9 @@ const focusOn = function(){
 
 	timeline.classList.add('focus');
 
-	timeslot.forEach((element)=>{
-		element.classList.add("deselected");
-	});
+	// timeslot.forEach((element)=>{
+	// 	element.classList.add("deselected");
+	// });
 
 	curweek_slot.forEach((element)=>{
 		element.classList.remove("deselected");
@@ -290,13 +221,161 @@ const focusOut = function(){
 }
 
 
-document.querySelector("#timeline_btn").addEventListener('click',()=>{
-	const timeline =document.querySelector("#Timeline");
+const  make_noticeList = function (){
+	const Notice_list = document.querySelector("#notice_list");
 
-	if(timeline.classList.contains('focus')){
-		focusOut();
+	const notice_list = Course.notice;
+
+	for(var i=0; i<notice_list.length;i++){
+		let newItem = document.createElement("li");
+		let newItem_a = document.createElement("a");
+		let newItem_subject = document.createTextNode(notice_list[i].subject);
+
+		newItem_a.appendChild(newItem_subject);
+		newItem.appendChild(newItem_a);
+		Notice_list.appendChild(newItem);
 	}
-	else {
-		focusOn();
+};
+
+const make_sectionList = function(){
+	const section = document.querySelector("#sections");
+
+	const section_list = Course.section;
+
+	for(var i =0; i<section_list.length;i++){
+		let newItem = document.createElement("tr");		
+		let newItem_name = document.createElement("td");		
+		let newItem_lectureTime= document.createElement("td");		
+		let newItem_lecturePlace= document.createElement("td");		
+		let newItem_labTime= document.createElement("td");		
+		let newItem_labPlace= document.createElement("td");		
+
+		let newItem_nameText = document.createTextNode(`Class ${i+1} ( ${section_list[i].number})`);		
+		let newItem_lectureTimeText= document.createTextNode( section_list[i].lecture_time);		
+		let newItem_lecturePlaceText= document.createTextNode( section_list[i].lecture_place);		
+		let newItem_labTimeText= document.createTextNode(section_list[i].lab_time);		
+		let newItem_labPlaceText= document.createTextNode(section_list[i].lab_place);	
+
+		newItem_name.appendChild(newItem_nameText);
+		newItem_lectureTime.appendChild(newItem_lectureTimeText);
+		newItem_lecturePlace.appendChild(newItem_lecturePlaceText);
+		newItem_labTime.appendChild(newItem_labTimeText);
+		newItem_labPlace.appendChild(newItem_labPlaceText);
+
+		newItem.appendChild(newItem_name);
+		newItem.appendChild(newItem_lectureTime);
+		newItem.appendChild(newItem_lecturePlace);
+		newItem.appendChild(newItem_labTime);
+		newItem.appendChild(newItem_labPlace);
+
+		section.appendChild(newItem);
 	}
-});
+}
+
+const make_peopleSlider = function () {
+	const container = document.querySelector("#people_container");
+
+	let peopleList = [];
+
+	peopleList.push(Course.Lecturer);
+
+	if(Course.Assistant){	
+		Course.Assistant.forEach((element)=>{
+			peopleList.push(element);
+		});
+	}
+	console.log(peopleList);
+	peopleList.forEach((element,index)=>{
+		let newItem_slide_switches = document.createElement("input");
+		let newItem_slide_label = document.createElement("label");
+		container.appendChild(newItem_slide_switches);
+		container.appendChild(newItem_slide_label);
+		newItem_slide_switches.type = "radio";
+		newItem_slide_switches.name = "slide-switches";
+		newItem_slide_switches.id = `slide_text${index}`;
+		newItem_slide_switches.classList.add("slide-switch");
+
+		newItem_slide_label.htmlFor = `slide_text${index}`;
+		newItem_slide_label.classList.add("slide-label");
+
+		let newItem_div = document.createElement("div");
+
+		newItem_div.classList.add("slide-content");
+		if(index == 0) {
+			newItem_slide_switches.checked = true;
+			newItem_div.classList.add("padded");
+		}
+
+		container.appendChild(newItem_div);
+
+		let newItem_name = document.createElement("h2");
+		let newItem_nameText = document.createTextNode(element.name);
+		let newItem_ul = document.createElement("ul");
+
+		newItem_name.appendChild(newItem_nameText);
+		newItem_div.appendChild(newItem_name);
+		newItem_div.appendChild(newItem_ul);
+
+		let newItem_office = document.createElement("li");
+		let newItem_tel = document.createElement("li");
+		let newItem_email = document.createElement("li");
+
+		let newItem_officeText = document.createTextNode("Office : " + element.office);
+		let newItem_telText = document.createTextNode("Tel : " + element.tel);
+		let newItem_emailText = document.createTextNode("Email : " + element.email);
+
+		newItem_office.appendChild(newItem_officeText);
+		newItem_tel.appendChild(newItem_telText);
+		newItem_email.appendChild(newItem_emailText);
+
+		newItem_ul.appendChild(newItem_office);
+		newItem_ul.appendChild(newItem_tel);
+		newItem_ul.appendChild(newItem_email);
+		if(element.img){
+
+			let newItem_img =document.createElement("img");
+			newItem_img.src=`${element.img}`;
+			newItem_img.classList.add("peopleImg");
+			newItem_div.appendChild(newItem_img);
+		}
+		newItem_div.appendChild(newItem_ul);
+	});
+
+
+}
+
+const make_courseObjectives = function() {
+	const course_container = document.querySelector("#coures_objectives");
+
+	const courseObjective_main = document.createElement("p");
+	const courseObjective_mainText = document.createTextNode(Course.course_objective.content.main);
+
+	courseObjective_main.appendChild(courseObjective_mainText);
+	course_container.appendChild(courseObjective_main);
+
+	let courseObjective_itemList = document.createElement("ul");
+
+	Course.course_objective.content.item.forEach((element)=>{
+		let courseObjective_item = document.createElement("li");
+		let courseObjective_itemText = document.createTextNode(element);
+
+		courseObjective_item.appendChild(courseObjective_itemText);
+		courseObjective_itemList.appendChild(courseObjective_item);
+	});
+
+	course_container.appendChild(courseObjective_itemList);
+
+
+}
+
+
+// document.querySelector("#timeline_btn").addEventListener('click',()=>{
+// 	const timeline =document.querySelector("#Timeline");
+
+// 	if(timeline.classList.contains('focus')){
+// 		focusOut();
+// 	}
+// 	else {
+// 		focusOn();
+// 	}
+// });

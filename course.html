@@ -22,59 +22,21 @@
     </div>
     <div id="content1" class="frame selected main-container">
       <div id="Timeline">
-        <button class="btn btn-blue btn-border-o">TIMELINE</button>
+        <!-- <button class="btn btn-blue btn-border-o">TIMELINE</button> -->
       </div>
       
     <div id="Home">
         <div id="Notice">
           <section>
             <h1>NOTICE</h1>
-            <ul>
-              <li><a href="new.html">2019 MID TERM SCORE</a></li>
-              <li><a href="new.html">2019 GRADE SCORE</a></li>
-              <li><a href="new.html">2019 PRIZE WINNER 100DOLLAR</a></li>
-              <li><a href="new.html">CHRISTMAS GRADE EVENT!</a></li>
+            <ul id="notice_list">
             </ul>
           </section>
           
         <div id="Inform">
           <h1>INFORMATION</h1>
           <div class="wrapper">
-            <div class="slider">
-              <input type="radio" name="slide-switches" id="slide_text" class="slide-switch">
-              <label for="slide_text" class="slide-label">Slide Text</label>
-              <div class="slide-content padded">
-                <h2>333PEOPLE</h2>
-                <img src="img/human/saemyeong.jpg" width="200px" height="300px">
-                <ul>
-                  <li>Office : 학연산클러스터 617호</li>
-                  <li>Tel : 031-400-5238</li>
-                  <li>Email : scottlee@hanyang.ac.kr</li>
-                </ul>
-              </div>
-              <input type="radio" name="slide-switches" id="slide_image" checked class="slide-switch">
-              <label for="slide_image" class="slide-label">Slide text</label>
-              <div class="slide-content">
-                <h2>Donguri 97</h2>
-                <img src="img/human/dongguri.jpg" width="200px">
-                <ul>
-                  <li>Office : 학연산클러스터 621호</li>
-                  <li>Tel : 010-5882-5882</li>
-                  <li>Email : dongguri97@hanyang.ac.kr</li>
-                </ul>
-              </div>
-          
-              <input type="radio" name="slide-switches" id="slide_video" class="slide-switch">
-              <label for="slide_video" class="slide-label">Slide text</label>
-              <div class="slide-content">
-                <h2>GiChan Lee</h2>
-                <img src="img/human/kichan.jpg" width="200px">
-                <ul>
-                  <li>Office : 학연산클러스터 621호</li>
-                  <li>Tel : 031-400-4754</li>
-                  <li>Email : fantasyopy@hanyang.ac.kr</li>
-                </ul>
-              </div>
+            <div class="slider" id="people_container">
             </div>
           </div>
         </div>
@@ -91,34 +53,13 @@
                 <th scope="col">LAB PLACE</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td data-label="CLASS">Class 1 (23487)</td>
-                <td data-label="LECTURE-TIME">Thu <span>(09:00 - 10:30)</span> <br> Fri <span>(13:00 - 14:30)</span></td>
-                <td data-label="LECTURE-PLACE"><span>Engineering Building#1 Room 402</span></td>
-                <td data-label="LAB-TIME">Fri <span>(09:00 - 11:00)</span></td>
-                <td data-label="LAB-PLACE"><span>Engineering Building#4 PC Room 1,2</span></td>
-              </tr>
-              <tr>
-                <td data-label="CLASS">Class 2 (23465)</td>
-                <td data-label="LECTURE-TIME">Thu <span>(10:30 - 12:00)</span>  Fri <span>(14:30 - 16:00)</span></td>
-                <td data-label="LECTURE-PLACE"><span>Engineering Building#1 Room 402</span></td>
-                <td data-label="LAB-TIME">Fri <span>(16:00 - 18:00)</span></td>
-                <td data-label="LAB-PLACE"><span>Engineering Building#4 PC Room 1,2</span></td>
-              </tr>
+            <tbody id="sections">
             </tbody>
           </table>
         </div>
           <div id="coures_objectives">
             <h1>Course Objectives</h1>
-            <p>In this course, the followings will be covered to adequately enable web programming and web application development:</p>
-            <ul>
-              <span><li>
-                Understand the protocols, language and systems used on the Web (HTML, CSS, HTTP, URLs, XML)
-              </li>
-              <li>Understand the functions of clients and servers on the Web<br> learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)  </li>
-            </span>
-            </ul>
+            
           </div>
         </div>
       </div>
@@ -133,7 +74,7 @@
     <div id="content3" class="frame deselected"></div>
 
     <script type="text/javascript" src="./js/timeline.js"></script>
-    <script type="text/javascript" src="./js/course.js?ver=2"></script>
+    <!-- <script type="text/javascript" src="./js/course.js?ver=2"></script> -->
 
   </body>
 </html>
