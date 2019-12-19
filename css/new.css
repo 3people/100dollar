@@ -14,8 +14,13 @@ input {
   padding: 0;
 }
 
+#navi > h1 > a > img{
+  width : 160px;
+  height : 57px;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto" !important;
 }
 
 div {
@@ -38,6 +43,7 @@ div {
 #header a {
   text-decoration: none;
   color: inherit;
+  z-index: 999;
   transition: color 0.3s ease;
 }
 
@@ -170,7 +176,7 @@ div {
   text-align: left;
   position: absolute;
   bottom: 120px;
-  left: 30px;
+  left: 89px;
   height: 75px;
   transition: all 0.5s;
   color: #fff;

@@ -125,7 +125,7 @@ position: relative;
 width: 80%;
 }
 
-.vertical-tab2 input[name="sections"] {
+.vertical-tab2 input[name="sections2"] {
 position: absolute;
 visibility: hidden;
 }
@@ -168,13 +168,13 @@ width: 220px;
 z-index:1;
 }
 
-.vertical-tab2 input[name="sections"]:checked + label { 
+.vertical-tab2 input[name="sections2"]:checked + label { 
 background: #fff;
 border-right:2px solid #3AC8FF;
 color: #bbb;
 }
 
-.vertical-tab2 input[name="sections"]:checked ~ article {
+.vertical-tab2 input[name="sections2"]:checked ~ article {
 display: block;
 }
 
@@ -232,5 +232,4 @@ h1 {
 
 .vertical-tab2 {
     width: 70%;
-}
 }

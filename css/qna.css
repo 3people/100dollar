@@ -71,6 +71,11 @@ a:visited {
   left: 15px;
 }
 
+#header #navi img {
+  width: 160px;
+  height: 57px;
+}
+
 #header #navi #navi-center {
   display: flex;
   justify-content: space-between;
