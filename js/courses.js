@@ -1,90 +1,51 @@
+const coursebox = document.querySelectorAll(".coursebox");
+const coursebox_content = document.querySelectorAll(".coursebox_content");
+const coursebox_btn = document.querySelectorAll(".coursebox_btn");
+const trig_under = document.querySelector("#trig_under");
+const trig_post = document.querySelector("#trig_post");	
 
-const navbar = document.querySelector("#navbar");
-const header = document.querySelector("#header");
-const dropdown_btn = document.querySelector(".dropdown-btn");
-const dropdown_btn2 = document.querySelectorAll(".dropdown-btn")[1];
-const dropdown_list = document.querySelectorAll(".dropdown-list")
-const dropdown_content = document.querySelector(".dropdown-content");
+const post_load = false;
 
 
-const  handleScroll = function(event){
 
-		let scrollTop = document.scrollingElement.scrollTop;
-		const screen_height = window.screen.height;
-		if (scrollTop >= 0.3*screen_height){
-			this.classList.remove("fixed")
-			this.classList.add("sticky");
-		}
-		else if(scrollTop <= 0.5*screen_height){	
-			this.classList.remove("sticky");
-			this.classList.add("fixed");
-		}
+const coursebox_mouseover = function(index){
+	this.classList.add("selected");
+	coursebox_content[index].classList.add("hidden");
+
 };
-const  handleScroll_nav = function(event){
 
-		let scrollTop = document.scrollingElement.scrollTop;
-		const screen_height = window.screen.height;
-		if (scrollTop >= 0.3*screen_height){
-			this.classList.remove("hidden")
-			this.classList.add("hidden");
-		}
-		else if(scrollTop <= 0.5*screen_height){
-			this.classList.remove("hidden");
-			setTimeout(()=>{
-				this.classList.add("hidden");
-			},3000);
-		}
+const coursebox_mouseout = function(index){
+	this.classList.remove("selected");
+	coursebox_content[index].classList.remove("hidden");
+
 };
-	
-const handleMouseMove = function(event){
-	const screen_height = window.screen.height;
-	if( event.pageY < 0.05*screen_height){
-		this.classList.remove("hidden");
-	}
-	else if(event.pageY > 0.3*screen_height){
+
+
+
+const triger_postgraduate = function(e){
+		this.classList.add("selected");
+		trig_under.classList.remove("selected");
+
+		document.querySelector(".content.selected").classList.remove("selected");
 		setTimeout(()=>{
-			this.classList.add("hidden");
-		})
-	}
+			document.querySelector("#Postgraduate").classList.add("selected")},500);
+};
+const triger_undergraduate = function(e){
+		this.classList.add("selected");
+		trig_post.classList.remove("selected");
+		document.querySelector(".content.selected").classList.remove("selected");
+
+		setTimeout(()=>{
+			document.querySelector("#Undergraduate").classList.add("selected")},500);
 };
 
-const toggle_dropdowncontent = function(event){
-	this.classList.toggle("a11y-hidden");
-}
-;
 
+coursebox.forEach((element,index)=>{
+	element.addEventListener("mouseover",coursebox_mouseover.bind(element,index))
+});
+coursebox.forEach((element,index)=>{
+	element.addEventListener("mouseout",coursebox_mouseout.bind(element,index))
+});
 
-
-const change_btn_content = function(event){
-	const btn = document.querySelectorAll(".dropdown-btn")
-	btn[1].innerHTML = this.innerHTML;
-	btn[0].innerHTML = this.innerHTML;
-}
-
-const handle_mouseOut = function(event){
-	if(!(this.classList.contains("a11y-hidden"))){
-		setTimeout(()=>{
-			this.classList.add("a11y-hidden");
-		},1000);
-	}
-}
-
-
-window.addEventListener('scroll',handleScroll.bind(header));
-window.addEventListener('scroll',handleScroll_nav.bind(navbar));
-window.addEventListener('mousemove',handleMouseMove.bind(navbar));
-
-dropdown_btn.addEventListener('click',toggle_dropdowncontent.bind(dropdown_content));
-dropdown_btn2.addEventListener('click',toggle_dropdowncontent.bind(dropdown_content));
-
-dropdown_list.forEach((element) =>{
-	element.addEventListener('click',change_btn_content.bind(element));
-});	
-
-dropdown_content.addEventListener('mouseleave',handle_mouseOut.bind(dropdown_content));
-
-
-setTimeout(()=>{
-	navbar.classList.add("hidden");
-},1000);
-
+trig_under.addEventListener('click',triger_undergraduate.bind(trig_under));
+trig_post.addEventListener('click',triger_postgraduate.bind(trig_post));

@@ -1,137 +1,139 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="./css/courses.css">
-	<link rel="stylesheet" type="text/css" href="./css/course.css">
-</head>
-<body>
-		<div id="navbar">
-  		<h2>Selab.</h2>
-  		<ul>
-  			<li><a href="#">nav1</a></li>
-  			<li><a href="#">nav2</a></li>
-  			<li><a href="#">nav3</a></li>
-  			<li><a href="#">nav4</a></li>
-  		</ul>
-  	</div>
-
-  	<div id="header">
-  		<h1>Web Application</h1>
-  		<div class="dropdown">
-  			<button class="dropdown-btn">content1</button>
-  			<div class="dropdown-content a11y-hidden">
-	  			<button class="dropdown-btn">content1</button>
-  				<a class="dropdown-list" >content1</a>
-  				<a class="dropdown-list" >content2</a>
-  				<a class="dropdown-list" >content3</a>
-  			</div>
-  		</div>
-  	</div>
-
-  	<div id="content1" class="frame selected">
-  		<div id="Timeline">
-  			<h2>Timeline</h2>
-  			<span id="timeline_btn">more → </span>
-  		</div>
-  		
-  		<div id="Home">
-  			<div id="Notice">
-  				<h2>Notice</h2>
-          <ul>
-            <li>휴강관련해 공지 올립니다.</li>
-            <li>시험관련해 공지 올립니다.</li>
-            <li>lab08 관련해 공지 올립니다.</li>
-          </ul>
-        </div>
-  			<div id="Inform">
-  				<h2>Inform</h2>
-          <div id="Lecturer_Assitants">
-              <h3>Lecturer & Assitants</h3>
-               <div>
-                 <ul>
-                 <h4>Scott Lee</h4>
-                   <li>Office : 학연산클러스터 617호</li>
-                   <li>Tel : 031-400-5238</li>
-                   <li>Email : scottlee@hanyang.ac.kr</li>
-                 </ul>
-                 <ul>
-                 <h4>Gihan Lee</h4>
-                   <li>Office : 학연산클러스터 621호</li>
-                   <li>Tel : 031-400-4754</li>
-                   <li>Email : fantasyopy@hanyang.ac.kr</li>
-                 </ul>
-                 <ul>
-                 <h4>Hakjin Lee</h4>
-                   <li>Office : 학연산클러스터 621호</li>
-                   <li>Tel : 031-400-4754</li>
-                   <li>Email : gsdjini91@hanyang.ac.kr</li>
-                 </ul>
-               </div>
-          </div>
-
-          <div id="class_section">
-            <h3>Sections</h3>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/course.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/prototype.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="navi">
+        <h1>
+          <a href="new.html"><img src="img/logo2.png" id="logo" /></a>
+        </h1>
+        <ul id="navi-center">
+          <li><a href="aboutme2-2.html">ABOUT</a></li>
+          <li><a href="members.html">MEMBERS</a></li>
+          <li><a href="publication.html">PUBLICATION</a></li>
+          <li><a href="courses.html">COURSE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content1" class="frame selected main-container">
+      <div id="Timeline">
+        <button class="btn btn-blue btn-border-o">TIMELINE</button>
+      </div>
+      
+    <div id="Home">
+        <div id="Notice">
+          <section>
+            <h1>NOTICE</h1>
             <ul>
-              <li>
-                <h4>Class 1(23487)</h4>
-                <ul>
-                  <li>Lecture Time : Thu(09:00 - 10:30) & Fri (13:00 - 14:30)</li>
-                  <li>Lecture Place : Enginerring Building#1 Room 402</li>
-                  <li>Lab Time :  Fri (09:00 - 11:00)</li>
-                  <li>Lab Place : Enginerring Building#4 PC Room 1 & 2</li>
-                </ul>
-              <li>
-                <h4>Class 2(2446  5)</h4>
-                <ul>
-                  <li>Lecture Time : Thu(10:30 - 12:00) & Fri (14:30 - 16:00)</li>
-                  <li>Lecture Place : Enginerring Building#1 Room 402</li>
-                  <li>Lab Time :  Fri (16:00 - 18:00)</li>
-                  <li>Lab Place : Enginerring Building#4 PC Room 1 & 2</li>
-                </ul>
-              </li>
+              <li><a href="new.html">2019 MID TERM SCORE</a></li>
+              <li><a href="new.html">2019 GRADE SCORE</a></li>
+              <li><a href="new.html">2019 PRIZE WINNER 100DOLLAR</a></li>
+              <li><a href="new.html">CHRISTMAS GRADE EVENT!</a></li>
             </ul>
+          </section>
+          
+        <div id="Inform">
+          <h1>INFORMATION</h1>
+          <div class="wrapper">
+            <div class="slider">
+              <input type="radio" name="slide-switches" id="slide_text" class="slide-switch">
+              <label for="slide_text" class="slide-label">Slide Text</label>
+              <div class="slide-content padded">
+                <h2>333PEOPLE</h2>
+                <img src="img/human/saemyeong.jpg" width="200px" height="300px">
+                <ul>
+                  <li>Office : 학연산클러스터 617호</li>
+                  <li>Tel : 031-400-5238</li>
+                  <li>Email : scottlee@hanyang.ac.kr</li>
+                </ul>
+              </div>
+              <input type="radio" name="slide-switches" id="slide_image" checked class="slide-switch">
+              <label for="slide_image" class="slide-label">Slide text</label>
+              <div class="slide-content">
+                <h2>Donguri 97</h2>
+                <img src="img/human/dongguri.jpg" width="200px">
+                <ul>
+                  <li>Office : 학연산클러스터 621호</li>
+                  <li>Tel : 010-5882-5882</li>
+                  <li>Email : dongguri97@hanyang.ac.kr</li>
+                </ul>
+              </div>
+          
+              <input type="radio" name="slide-switches" id="slide_video" class="slide-switch">
+              <label for="slide_video" class="slide-label">Slide text</label>
+              <div class="slide-content">
+                <h2>GiChan Lee</h2>
+                <img src="img/human/kichan.jpg" width="200px">
+                <ul>
+                  <li>Office : 학연산클러스터 621호</li>
+                  <li>Tel : 031-400-4754</li>
+                  <li>Email : fantasyopy@hanyang.ac.kr</li>
+                </ul>
+              </div>
             </div>
-              <div id="coures_objectives">
-                <h3>Course Objectives</h3>
-                <p>In this course, the followings will be covered to adequately enable web programming and web application development:</p>
-                <ul>
-                  <li>
-                    Understand the protocols, language and systems used on the Web (HTML, CSS, HTTP, URLs, XML)
-                  </li>
-                  <li>Understand the functions of clients and servers on the Web & learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)  </li>
-                  <li>Obtain ability to design and implement an interactive web site where usability, accessibility and internationalization issues are considered</li>
-                  <li>Learn how to use/manage database associated with web applications (mainly storage and retrieval)</li>
-                </ul>
-              <button>Coure Forum</button>
-              </div>
-              <div id="Assesment">
-                <h3>Assesment</h3>
-                <ul>
-                  <li>Attendance (10%)</li>
-                  <li>Midterm Exam (30%)</li>
-                  <li>Final Exam (30%)</li>
-                  <li>Team Project (30%)</li>
-                </ul>
-              </div>
-
           </div>
-  			</div>
-		</div>
+        </div>
+        <div id="class_section">
+          <h1>Sections</h1>
+          <table>
+            <caption>LECTURE SUMMARY</caption>
+            <thead>
+              <tr>
+                <th scope="col">CLASS</th>
+                <th scope="col">LECTURE TIME</th>
+                <th scope="col">LECTURE PLACE</th>
+                <th scope="col">LAB  <br>TIME</th>
+                <th scope="col">LAB PLACE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="CLASS">Class 1 (23487)</td>
+                <td data-label="LECTURE-TIME">Thu <span>(09:00 - 10:30)</span> <br> Fri <span>(13:00 - 14:30)</span></td>
+                <td data-label="LECTURE-PLACE"><span>Engineering Building#1 Room 402</span></td>
+                <td data-label="LAB-TIME">Fri <span>(09:00 - 11:00)</span></td>
+                <td data-label="LAB-PLACE"><span>Engineering Building#4 PC Room 1,2</span></td>
+              </tr>
+              <tr>
+                <td data-label="CLASS">Class 2 (23465)</td>
+                <td data-label="LECTURE-TIME">Thu <span>(10:30 - 12:00)</span>  Fri <span>(14:30 - 16:00)</span></td>
+                <td data-label="LECTURE-PLACE"><span>Engineering Building#1 Room 402</span></td>
+                <td data-label="LAB-TIME">Fri <span>(16:00 - 18:00)</span></td>
+                <td data-label="LAB-PLACE"><span>Engineering Building#4 PC Room 1,2</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          <div id="coures_objectives">
+            <h1>Course Objectives</h1>
+            <p>In this course, the followings will be covered to adequately enable web programming and web application development:</p>
+            <ul>
+              <span><li>
+                Understand the protocols, language and systems used on the Web (HTML, CSS, HTTP, URLs, XML)
+              </li>
+              <li>Understand the functions of clients and servers on the Web<br> learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)  </li>
+            </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  	<div id="content2" class="frame deselected">
+    <div id="content2" class="frame deselected">
       <h2>PBL</h2>
       <div id="pbl_objective"> </div>
       <span id="pbl_groupBtn">more</span>
-     <div id="pbl_GGroup" class="fold"></div> 
+      <div id="pbl_GGroup" class="fold"></div> 
     </div>
-  	<div id="content3" class="frame deselected"></div>
+    <div id="content3" class="frame deselected"></div>
 
-
-
-  	<script type="text/javascript" src="./js/courses.js"></script>
     <script type="text/javascript" src="./js/timeline.js"></script>
-  	<script type="text/javascript" src="./js/course.js"></script>
+    <script type="text/javascript" src="./js/course.js?ver=2"></script>
 
-</body>
+  </body>
 </html>
