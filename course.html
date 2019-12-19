@@ -2,30 +2,30 @@
 <html>
   <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/courses.css" />
     <link rel="stylesheet" type="text/css" href="./css/course.css" />
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="./js/prototype.js"></script>
   </head>
   <body>
-    <div id="header">
-      <div id="navi">
-        <h1>
-          <a href="new.html"><img src="img/logo2.png" id="logo" /></a>
-        </h1>
-        <ul id="navi-center">
-          <li><a href="aboutme2-2.html">ABOUT</a></li>
-          <li><a href="members.html">MEMBERS</a></li>
-          <li><a href="publication.html">PUBLICATION</a></li>
-          <li><a href="courses.html">COURSE</a></li>
-        </ul>
+    <div id="header" class = "nav-down">
+      <h1>Web Application</h1>
+      <div class="dropdown">
+        <button class="dropdown-btn">content1</button>
+        <div class="dropdown-content a11y-hidden">
+          <button class="dropdown-btn">content1</button>
+          <a class="dropdown-list" >content1</a>
+          <a class="dropdown-list" >content2</a>
+          <a class="dropdown-list" >content3</a>
+        </div>
       </div>
     </div>
-    <div id="content1" class="frame selected main-container">
+
+    <div id="content1" class="frame selected">
       <div id="Timeline">
         <!-- <button class="btn btn-blue btn-border-o">TIMELINE</button> -->
       </div>
       
-    <div id="Home">
+      <div id="Home">
         <div id="Notice">
           <section>
             <h1>NOTICE</h1>
@@ -59,10 +59,9 @@
         </div>
           <div id="coures_objectives">
             <h1>Course Objectives</h1>
-            
+
           </div>
         </div>
-      </div>
     </div>
 
     <div id="content2" class="frame deselected">
@@ -73,7 +72,11 @@
     </div>
     <div id="content3" class="frame deselected"></div>
 
+
+
+    <script type="text/javascript" src="./js/courses.js"></script>
     <script type="text/javascript" src="./js/timeline.js"></script>
+
     <!-- <script type="text/javascript" src="./js/course.js?ver=2"></script> -->
 
   </body>
