@@ -20,7 +20,7 @@ input {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto" !important;
 }
 
 div {
@@ -43,6 +43,7 @@ div {
 #header a {
   text-decoration: none;
   color: inherit;
+  z-index: 999;
   transition: color 0.3s ease;
 }
 
