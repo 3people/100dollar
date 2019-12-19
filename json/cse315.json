@@ -1,0 +1,137 @@
+{
+	"type" : "course",
+	"content" : {	
+		"year" : 2019,
+		
+		"semester" : 2,
+
+		"date"  : [ "09/05","09/06","09/12","09/13","09/19","09/20","09/26","09/27","10/02","10/03","10/09","10/10","10/16","10/17","10/23","10/24","10/30","10/31","11/07","11/08","11/14","11/15","11/21","11/22","11/28","11/29","12/05","12/06","12/12","12/13","12/19","12/20"
+		],
+
+		"week" : [ 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16],
+
+		"lecture_schedule" : [
+			[0,1],[2],"No Lecture(추석 Thanksgiving)","No Lecture(추석 Thanksgiving)",[2],[3],[3],[4],"No Lecture(National Foundation Day)",[4],[5],[5],[5],[6],"Mid-Term","Mid-Term",[6],[6],[7],[7],[8],[8],[9],[9],[9,10],[10],[11],[12],[12],[13],"Final-Term","Final-Term","Final-Term","Final-Term"
+		],
+
+		"lecture" : [	
+			{"subject" :"Introduction ",
+				 "lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"
+		}
+		, {"subject" : "The Internet and World Wide Web",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/01-www.html"
+
+		}
+		, {"subject" :"Basic HTML",
+			"lecture_slide" :  "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/02-html.html"
+
+		}
+		, {"subject" :"CSS for Styling",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/03-css.html"
+
+		}
+		, {"subject" :"Page Layout",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/04-layout.html"
+
+		}
+		, {"subject" :"Basic PHP",
+			"lecture_slide" :"https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/05-PHP.html"
+
+		}
+		,{
+			"subject" : "Forms",
+			"lecture_slide": "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html"
+		}
+		, {"subject" :"Relational Database & SQL",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/07-sql.html"
+
+		}
+		, {"subject" :"JavaScript",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/08-javascript.html"
+
+		}
+		, {"subject" :"DOM",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/09-dom.html"
+
+		}
+		, {"subject" :"Prototype",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/10-prototype.html"
+
+		}
+		, {
+			"subject" : "Events",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/11-events.html"
+		}	
+		,{"subject" :"Ajax & XML & JSON",
+			"lecture_slide" :  "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/12-ajaxXmlJson.html"
+		}
+		,{
+			"subject" : "Web service",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/13-webServices.html"
+		}
+		, {"subject" :"Scriptaculous",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/14-scriptaculous.html"
+		}
+		],
+
+		"lab_schedule" : [ null, null,0,1,2,3,4,null,5,6,7,8,9,10,null,null
+		],
+		
+		"lab" : [{
+			"subject" : "Introduction",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab0-introduction.html"
+		},{
+			"subject" : "About Me(HTML)",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab1-aboutme(HTML).html"
+		},{
+			"subject" : "CSS",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab2-aboutme(CSS).html"
+		},{
+			"subject" : "CSS Design & Layout",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab3-favorite.html"
+		},{
+			"subject" : "Movie Review(HTML, CSS, Layout)",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab4-movieReview.html"
+		},{
+			"subject" : "Basic PHP",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab5-musicLibrary.html"
+		},{
+			"subject" : "Forms",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab6-gradeStore.html"
+		},{
+			"subject" : "SQL",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab7-SQL.html"
+		},{
+			"subject" : "JavaScript",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab8-pimpMyText.html"
+		},{
+			"subject" : "Maze (DOM, Prototype, Event)",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab9-maze.html"
+		},{
+			"subject" : "Ajax & XML & JSON ",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab10-bookSearch.html"
+		}
+		],
+
+		"notice_schedule" : [
+			null,null,null,null,[0],null,null,[1],
+			null,null,null,null,[2],null,null,[3]
+		],
+
+		"notice" : [
+			{	
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			},{
+				"subject" : "시험 관련되어서 공지 올립니다",
+				"content" : "시험 관련되어서 렙탑사용자들은 블랙보드 공지를 꼭 확인하시어 신청을 해주시기 바랍니다."
+			},{
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			},{
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			}
+		]
+	}
+}

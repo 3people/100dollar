@@ -1,0 +1,172 @@
+{
+	"type" : "course",
+	"content" : {	
+		"year" : 2018,
+		
+		"semester" : 1,
+
+		"date"  : [ "03/05","03/12","03/19","03/26","04/02","04/09","04/116","04/23","05/07","05/14","05/21","05/28","06/04","06/11","06/18"
+		],
+
+		"week" : [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+
+		"lecture_schedule" : [
+			[0,1],[1],[2],[3],[4],[4],[5],"Mid-Test",
+			[6,7],[8],[9],[10],[11],[12],[13],"Final-PBL"
+		],
+
+		"lecture" : [	 
+			{"subject" :"Course Overview ",
+				 "lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"
+		}
+		, {"subject" : "Introduction to Software Engineering",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/01-www.html"
+
+		}
+		, {"subject" :"Software & Software Engineering",
+			"lecture_slide" :  "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/02-html.html"
+
+		}
+		, {"subject" :"Process",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/03-css.html"
+
+		}
+		, {"subject" :"Agile Development",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/04-layout.html"
+
+		}
+		, {"subject" :"Requirement Engineering",
+			"lecture_slide" :"https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/05-PHP.html"
+
+		}
+		,{
+			"subject" : "Project Management",
+			"lecture_slide": "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html"
+		}
+		, {"subject" :"Analysis Modeling",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/07-sql.html"
+
+		}
+		, {"subject" :"Design Engineering",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/08-javascript.html"
+
+		}
+		, {"subject" :"Architectural Design",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/09-dom.html"
+
+		}
+		, {"subject" :"Component Design",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/10-prototype.html"
+
+		}
+		, {
+			"subject" : "Software Testing - Fundamental Concept",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/11-events.html"
+		}	
+		,{"subject" :"Software Testing",
+			"lecture_slide" :  "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/12-ajaxXmlJson.html"
+		}
+		,{
+			"subject" : "Product Metrics",
+			"lecture_slide" : "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/13-webServices.html"
+		}
+		],
+
+		"lab_schedule" : [ null, null,0,1,2,3,4,null,5,6,7,8,9,10,11,null
+		],
+		
+		"lab" : [{
+			"subject" : "소프트웨어 개발 프로젝트 실패의 원인",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab0-introduction.html"
+		},{
+			"subject" : "Trello & Git",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab1-aboutme(HTML).html"
+		},{
+			"subject" : "Activity 집만들기",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab2-aboutme(CSS).html"
+		},{
+			"subject" : "SRS 작성",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab3-favorite.html"
+		},{
+			"subject" : "Project Management",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab4-movieReview.html"
+		},{
+			"subject" : "Use Case",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab5-musicLibrary.html"
+		},{
+			"subject" : "UML",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab6-gradeStore.html"
+		},{
+			"subject" : "Project Design Modeling",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab7-SQL.html"
+		},{
+			"subject" : "Architectural Modeling",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab8-pimpMyText.html"
+		},{
+			"subject" : "Testing1",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab9-maze.html"
+		},{
+			"subject" : "Testing2",
+			"lab_note" : "https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab10-bookSearch.html"
+		}
+		],
+
+		"notice_schedule" : [
+			null,null,null,null,[0],null,null,[1],
+			null,null,null,null,[2],null,null,[3]
+		],
+
+		"notice" : [
+			{	
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			},{
+				"subject" : "시험 관련되어서 공지 올립니다",
+				"content" : "시험 관련되어서 렙탑사용자들은 블랙보드 공지를 꼭 확인하시어 신청을 해주시기 바랍니다."
+			},{
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			},{
+				"subject" : "보강 관련되어서 공지 올립니다",
+				"content" : "보강 관련되어서 이러쿵 절러쿵 이러쿵저러쿵......"
+			}
+		],
+
+		"Lecturer" : {
+			"name" : "Scott Lee",
+			"office" : "학연산클러스터 617호",
+			"tel" : "031-400-5238",
+			"email" : "scottlee@hanyang.ac.kr",
+			"img" :"https://t1.daumcdn.net/cfile/tistory/99ADE7495A3386642E"
+		},
+
+		"Assistant" : [
+		{
+			"name" : "HackJin Lee",
+			"office" : "학연산클러스터 621호",
+			"tel" : "031-400-4754",
+			"email" : "gsdjini91@gmail.com",
+			"img" : "http://m.young.hyundai.com/upload/oldUnvs/data_down/Board/20120630205930962/_KVwKIMDpjDhqqtl2n740.jpg"
+		}
+		],
+		"section" : [
+			{
+				"number" : "12345",
+				"lecture_time" : "Mon (09:00 ~ 12:00)",
+				"lecture_place" : " IC-PBL Playing Purple",
+				"lab_time" : "Mon (13:00 ~ 15:00) ",
+				"lab_place" : "IC-PBL Playing Purple"
+			}
+		],
+		"course_objective" : {
+			"course_forum" : "https://selab.hanyang.ac.kr/courses/cse406/2018/#",
+			"content" : "dd"
+		},
+
+		"Assesment" : [
+			{"Participation" : "20%"},
+			{"Assignment & Laboratory" : "30%"},
+			{"Team Project" : "50%"}
+		]
+	}
+}

@@ -107,8 +107,13 @@ a {
   filter: hue(0.2);
 }
 
-.dropdown-content {
-  position: absolute;
+#navi > h1 > a > img{
+  width : 160px;
+  height : 57px;
+}
+
+
+#header #navi #navi-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
