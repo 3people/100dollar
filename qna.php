@@ -8,11 +8,12 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
    <link rel="stylesheet" href="css/qna.css" />
    <link rel="stylesheet" href="css/animate.css" />
+   <link rel="shortcut icon" href="img/favicon.png" />
    <script src="js/wow.min.js"></script>
    <script>
       new WOW().init();
    </script>
-   <title>Document</title>
+   <title>SE LAB</title>
 </head>
 
 
@@ -20,7 +21,7 @@
    <div id="header">
       <div id="navi">
          <h1>
-            <a href="new.html"><img src="img/logo.png" id="logo" /></a>
+            <a href="new.html"><img src="img/logo2.png" id="logo" /></a>
          </h1>
          <ul id="navi-center">
             <li><a href="aboutme2-2.html">ABOUT</a></li>
@@ -42,7 +43,7 @@
       $rows = $db->query("SELECT * from board order by post_number desc;");
       $total = mysqli_num_rows($result);
       session_start(); ?>
-      <div id="board">
+      <div id="board" class="wow fadeInUp" data-wow-delay="0.5s">
          <div class=text>
             <button class="table-button" onclick=" location.href='write.php'">글쓰기</button>
          </div>

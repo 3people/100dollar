@@ -8,18 +8,19 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
    <link rel="stylesheet" href="css/qna.css" />
    <link rel="stylesheet" href="css/animate.css" />
+   <link rel="shortcut icon" href="img/favicon.png" />
    <script src="js/wow.min.js"></script>
    <script>
       new WOW().init();
    </script>
-   <title>Document</title>
+   <title>SE LAB</title>
 </head>
 
 <body>
    <div id="header">
       <div id="navi">
          <h1>
-            <a href="new.html"><img src="img/logo.png" id="logo" /></a>
+            <a href="new.html"><img src="img/logo2.png" id="logo" /></a>
          </h1>
          <ul id="navi-center">
             <li><a href="aboutme2-2.html">ABOUT</a></li>
@@ -32,7 +33,7 @@
    </div>
 
    <div id="qna_content">
-      <div id="qna_text" class="wow fadeInUp">
+      <div id="qna_text">
          Q&A
       </div>
       <?php
