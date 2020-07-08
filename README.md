@@ -1,5 +1,5 @@
 # 100dollar
-100dollar is an ongoing project in the CSE326 at Hanyang University
+100dollar is a project in the CSE326(Web application) at Hanyang University
 ## Team member
 * [김덕영](https://github.com/dudejrs) - course
 * [김동규](https://github.com/kimdg1105) - members
